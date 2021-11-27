@@ -1,7 +1,7 @@
 {
   "name": "friendly-laravel-mix",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.3",
+  "description": "This is a solution to use Laravel Mix simplified, become more fast declare your styles and scripts files.",
   "main": "index.js",
   "scripts": {
     "test": "node index"

@@ -1,3 +1,1 @@
-const Friendly = require('./dist/FriendlyLaraMix')
-
-module.exports = Friendly
+module.exports = require('./dist/FriendlyLaraMix')
