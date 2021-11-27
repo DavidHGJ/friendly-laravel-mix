@@ -1,0 +1,24 @@
+{
+  "name": "friendly-laravel-mix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidHGJ/friendly-laravel-mix.git"
+  },
+  "keywords": [],
+  "author": "David Henderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidHGJ/friendly-laravel-mix/issues"
+  },
+  "homepage": "https://github.com/DavidHGJ/friendly-laravel-mix#readme",
+  "dependencies": {
+    "laravel-mix": "^6.0.39",
+    "mz": "^2.7.0"
+  }
+}
