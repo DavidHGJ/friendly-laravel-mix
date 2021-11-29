@@ -4,7 +4,7 @@
 This library was created with aim simplify the use of Laravel Mix, because its was a constant problem in my work. Then thinking in good solution i create this librabry for this.
 
 ### Install
-The installation is veryh simple, you need the npm installed in your system, if you already have installed run this code:
+The installation is very simple, you need the npm installed in your system, if you already have installed run this code:
 - npm install friendly-laravel-mix <br/>
 ![image](https://user-images.githubusercontent.com/69371953/143684584-bf2f84e2-4707-4768-af21-f15d4df18328.png)
 
@@ -22,7 +22,7 @@ Now you just need to call the method. <br/>
 ![image](https://user-images.githubusercontent.com/69371953/143684959-88e39d79-d717-46eb-ab91-9dbe2b64fe41.png)
 
 #### OBS:
--The default location to save your copiled file is folder 'public/your-defined-folder' but if you need to change this call the method setDestiny('path-to-destiny') before defining yours folders path, look the example bottom: <br/>
+-The default location to save your copiled file is folder 'public/your-defined-folder' but if you need to change this call the method setDestiny('path-to-destiny') before defining yours folders path, look the example bellow: <br/>
 ![image](https://user-images.githubusercontent.com/69371953/143685132-4bb3a3e9-074d-4e58-8593-dfd27129c1b1.png)
 
 ### Available Methods
