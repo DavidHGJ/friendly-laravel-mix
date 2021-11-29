@@ -6,29 +6,39 @@ class FriendlyLaraMix
         this.destiny = 'public/'
     }
 
-    addFolder(name, folder)
+    addFolder(name, folder, destiny = undefined)
     {
-        let destiny = this.getDestiny()
-
         this[name] = {
             scripts: function (fileName) 
             {
-                mix.scripts(`${folder}/${fileName}.js`, `${destiny}js/${folder}/${fileName}.js`)
+                if (destiny !== undefined)
+                    mix.scripts(`${folder}/${fileName}.js`, `${destiny}/${fileName}.js`)
+                else
+                    mix.scripts(`${folder}/${fileName}.js`, `${this.getDestiny('js')}/${folder}/${fileName}.js`)
             },
 
             js: function (fileName) 
             {
-                mix.js(`${folder}/${fileName}.js`, `${destiny}js/${folder}/${fileName}.js`)
+                if (destiny !== undefined)
+                    mix.js(`${folder}/${fileName}.js`, `${destiny}/${fileName}.js`)
+                else
+                    mix.js(`${folder}/${fileName}.js`, `${this.getDestiny('js')}/${folder}/${fileName}.js`)
             },
 
             sass: function (fileName) 
             {
-                mix.sass(`${folder}/${fileName}.sass`, `${destiny}css/${folder}/${fileName}.css`)
+                if (destiny !== undefined)
+                    mix.sass(`${folder}/${fileName}.sass`, `${destiny}/${fileName}.css`)
+                else
+                    mix.sass(`${folder}/${fileName}.sass`, `${this.getDestiny('css')}/${folder}/${fileName}.css`)
             },
 
             scss: function (fileName) 
             {
-                mix.sass(`${folder}/${fileName}.scss`, `${destiny}css/${folder}/${fileName}.css`)
+                if (destiny !== undefined)
+                    mix.sass(`${folder}/${fileName}.scss`, `${destiny}/${fileName}.css`)
+                else
+                    mix.sass(`${folder}/${fileName}.scss`, `${this.getDestiny('css')}/${folder}/${fileName}.css`)
             }
         }
     }
@@ -43,9 +53,9 @@ class FriendlyLaraMix
         this.destiny = `${pathDestiny}/`
     }
 
-    getDestiny()
+    getDestiny(aditional = '')
     {
-        return this.destiny
+        return this.destiny + aditional
     }
 }
 
