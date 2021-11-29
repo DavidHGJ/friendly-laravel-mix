@@ -13,9 +13,11 @@ Start by calling the module <br/>
 ![image](https://user-images.githubusercontent.com/69371953/143684682-045aca6a-7983-49eb-9503-3a9b87f9ac83.png)
 
 ### Defining new path to use <br/>
-![image](https://user-images.githubusercontent.com/69371953/143684720-4ddef3d1-c5e7-44c0-96a3-bc3972538c8b.png) <br/>
-The first parameter is a name you use to call the path.
-The second parameter is path to folder where you save yours styles and scripts files.
+![image](https://user-images.githubusercontent.com/69371953/143903335-9d699e43-48c5-4b2f-9608-5d10b96809d1.png)
+<br/>
+The first parameter is a name you use to call the path. <br/>
+The second parameter is path to folder where you save yours styles and scripts files. <br/>
+The third parameter is optional and is the destiny path where you will save your copiled styles and scripts.
 
 ### Defining files
 Now you just need to call the method. <br/>
