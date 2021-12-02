@@ -51,6 +51,11 @@ class FriendlyLaraMix
         }
     }
 
+    getMix()
+    {
+        return mix
+    }
+
     version ()
     {
         mix.version()
