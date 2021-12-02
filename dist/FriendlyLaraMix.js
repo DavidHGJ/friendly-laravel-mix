@@ -24,7 +24,15 @@ class FriendlyLaraMix
                 else
                     mix.js(`${folder}/${fileName}.js`, `${this.getDestiny('js')}/${folder}/${fileName}.js`)
             },
-
+            
+            vue: function (fileName) 
+            {
+                if (destiny !== undefined)
+                    mix.js(`${folder}/${fileName}.js`, `${destiny}/${fileName}.js`).vue()
+                else
+                    mix.js(`${folder}/${fileName}.js`, `${this.getDestiny('js')}/${folder}/${fileName}.js`).vue()
+            },
+            
             sass: function (fileName) 
             {
                 if (destiny !== undefined)
