@@ -6,6 +6,9 @@ This library was created with aim simplify the use of Laravel Mix, because its w
 ### Install
 The installation is very simple, you need the npm installed in your system, if you already have installed run this code:
 - npm install friendly-laravel-mix <br/>
+```bash
+npm install friendly-laravel-mix
+```
 ![image](https://user-images.githubusercontent.com/69371953/143684584-bf2f84e2-4707-4768-af21-f15d4df18328.png)
 
 ### Starting Use
