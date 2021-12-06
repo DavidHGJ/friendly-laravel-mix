@@ -9,14 +9,17 @@ The installation is very simple, you need the npm installed in your system, if y
 ```bash
 npm install friendly-laravel-mix
 ```
-![image](https://user-images.githubusercontent.com/69371953/143684584-bf2f84e2-4707-4768-af21-f15d4df18328.png)
 
 ### Starting Use
 Start by calling the module <br/>
-![image](https://user-images.githubusercontent.com/69371953/143684682-045aca6a-7983-49eb-9503-3a9b87f9ac83.png)
+```js
+const Friendly = require('friendly-laravel-mix')
+```
 
 ### Defining new path to use <br/>
-![image](https://user-images.githubusercontent.com/69371953/143903335-9d699e43-48c5-4b2f-9608-5d10b96809d1.png)
+```js
+Friendly.addFolder('foo', 'resources/js', 'public/js')
+```
 <br/>
 The first parameter is a name you use to call the path. <br/>
 The second parameter is path to folder where you save yours styles and scripts files. <br/>
@@ -24,22 +27,52 @@ The third parameter is optional and is the destiny path where you will save your
 
 ### Defining files
 Now you just need to call the method. <br/>
-![image](https://user-images.githubusercontent.com/69371953/143684959-88e39d79-d717-46eb-ab91-9dbe2b64fe41.png)
-
+```js
+ Friendly.foo.scripts('script-1')
+ Friendly.foo.js('script-2')
+```
 #### OBS:
 -The default location to save your copiled file is folder 'public/your-defined-folder' but if you need to change this call the method setDestiny('path-to-destiny') before defining yours folders path, look the example below: <br/>
-![image](https://user-images.githubusercontent.com/69371953/143685132-4bb3a3e9-074d-4e58-8593-dfd27129c1b1.png)
-
+```js
+Friendly.setDestiny('public/assets')
+```
 ### Available Methods
 
 #### Folder methods
 - After define your paths the available methods is:
-  - scripts(js-file-name); //Similar use to Laravel Mix 
-  - js(js-file-name); //Similar use to Laravel Mix 
-  - sass(sass-file-name); //Similar use to Laravel Mix 
+  - scripts(js-file-name); //Similar use to Laravel Mix
+    ```js
+    Friendly.foo.scripts('file-name')
+    ```
+  - js(js-file-name); //Similar use to Laravel Mix
+    ```js
+    Friendly.foo.js('file-name')
+    ```
+  - sass(sass-file-name); //Similar use to Laravel Mix
+    ```js
+    Friendly.foo.sass('file-name')
+    ```
   - scss(scss-file-name); //Similar use to sass method in Laravel Mix
+    ```js
+    Friendly.foo.scss('file-name')
+    ```
+  - vue('js-file-name'); //Similar use to js method but this method add .vue in js file.
+    ```js
+    Friendly.foo.vue('file-name') // equivalent to mix.js().vue
+    ```
 
 #### Class methods
 - version() // Similar use to Laravel Mix
+```js
+Friendly.version()
+```
+
+-getMix() // Return Laravel Mix instance
+```js
+Friendly.getMix()
+
+//Use example
+Friendly.getMix().webpackConfig({...})
+```
 
 (you don't need to pass the file extension)
