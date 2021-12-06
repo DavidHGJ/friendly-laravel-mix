@@ -60,6 +60,8 @@ Friendly.setDestiny('public/assets')
     ```js
     Friendly.foo.vue('file-name') // equivalent to mix.js().vue
     ```
+    
+(you don't need to pass the file extension)
 
 #### Class methods
 - version() // Similar use to Laravel Mix
@@ -74,5 +76,3 @@ Friendly.getMix()
 //Use example
 Friendly.getMix().webpackConfig({...})
 ```
-
-(you don't need to pass the file extension)
